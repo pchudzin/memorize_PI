@@ -1,2 +1,3 @@
 # memorize_PI
- memorize PI digits
+Learn and examine PI digits (up to 2000 digits after comma).
+
