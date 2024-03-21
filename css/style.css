@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6e6e6;
+    background: url("../img/gradient_bg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#wrapper{
+    width: 600px;
+    padding: 20px;
+    box-shadow: rgba(95, 88, 76, 0.3) 0 1px 2px 0, rgba(95, 88, 76, 0.15) 0 2px 6px 2px;
+    color: #000;
+    background: linear-gradient(45deg, rgb(172, 225, 255) 0%, rgb(255, 254, 217) 50%, rgb(255, 159, 179) 100%);
+    border-radius: 2px;
+}
+h1{
+    font-size: 24px;
+    display: block;
+    float: left;
+}
+#fontIncrease, #fontDecrease {
+    padding: 3px 6px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #ff5a7d;
+    color: rgb(243, 243, 243);
+    border: none;
+    font-size: 16px;
+}
+#fontIncrease:hover, #fontDecrease:hover{
+    background-color: #ff496f;
+    color: white;
+}
+.fontButtons{
+    float: right;
+}
+.clr{
+    clear: both;
+    content: "";
+    display: block;
+}
+label{
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+p{
+    padding: 10px 0;
+    word-wrap: break-word;
+}
+input{
+    height: 30px;
+    border: 1px solid #7ea7ff;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 18px;
+}
+input:focus, select:focus, textarea:focus, file:focus{
+    outline: none;
+}
+input:hover, input:focus{
+    box-shadow: 0px 0px 4px 0px rgb(185, 220, 255);
+    transition: 300ms;
+}
+input::placeholder{
+    color: rgb(122, 122, 122);
+    opacity: 1;
+}
+#three_dot{
+    display: inline;
+    font-weight: bold;
+    font-size: 18px;
+}
+#digitsInput{
+    background-color: #ffeed0;
+    width: 96.4%;
+    caret-color: red;
+}
+#pFromInput{
+    display: none;
+}
+#compareResult{
+    font-size: 16px;
+}
+#numbersCount{
+    border-bottom: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+/* input[type=number]{
+  -moz-appearance: textfield;
+} */
+#redMistake{
+    color: red;
+}
+#pFromInputFormatted{
+    font-size: 22px;
+    text-align: justify;
+}
+#PiDigitsCount{
+    width: 60px;
+    height: 25px;
+    background-color: #ffeed0;
+    text-align: center;
+}
+#inlineLabel{
+    display: inline-block;
+    padding: 10px 0 0;
+}
+input:focus::placeholder{
+    color: transparent;
+}
+#scoreTimeLabel{
+    visibility: hidden;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
+#scoreTimeSpan{
+    visibility: hidden;
+    font-size: 16px;
+}
+.noselect {
+    -webkit-touch-callout: none; 
+      -webkit-user-select: none;
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none; 
+              user-select: none; 
+}
+#cheatingDiv span{
+    font-size: 14px;
+    font-weight: bold;
+}

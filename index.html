@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Memorize PI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap');
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="quizForm">
+            <div class="hAndfb">
+                <h1>Memorizing &#960</h1>
+                <div class="fontButtons">
+                    <div id="fontIncrease" class="noselect">A+</div>
+                    <div id="fontDecrease" class="noselect">A-</div>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <label for="PiDigitsCount" id="inlineLabel">Start from </label>
+            <input type="tel" id="PiDigitsCount" placeholder="0">
+            <span>&#960 digits</span>
+            <label for="digitsInput">&#960 digits from your memory (up to 2000 digits)</label>
+            <div id="three_dot">3.</div>
+            <input type="tel" id="digitsInput"  onkeypress="validate(event)" maxlength="2002">
+            <p id="pFromInput"></p>
+            <p id="pFromInputFormatted"></p>
+            <p id="numbersCount"></p>
+            <p id="compareResult"></p>
+            <div id="timerDiv">
+                <span id="scoreTimeLabel">Time: </span><span id="scoreTimeSpan"></span>
+            </div>
+            <div id="cheatingDiv"><span></span></div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
