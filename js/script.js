@@ -1,4 +1,6 @@
-const start = Date.now();
+function startTimer(){
+    window.start = Date.now();
+}
 const scoreTimeLabel = document.getElementById("scoreTimeLabel");
 const scoreTimeSpan = document.getElementById("scoreTimeSpan");
 const pFromInput = document.getElementById("pFromInput");
@@ -23,6 +25,9 @@ function getInput(){
 }
 
 let digitsInput = document.getElementById("digitsInput");
+
+digitsInput.addEventListener('keydown', startTimer, {once:true});
+
 function get_PI(){
     const PI_trimmed= PI_digits.substring(0, getInput().length);
 
@@ -51,15 +56,16 @@ digitsInput.addEventListener('keydown', function(event) {
             if (key === "Enter" && !cheating) {
                 const end = Date.now();
                 const elapsed = Math.floor( (end - start) / 1000 );
+                const milis = (end - start) % 1000;
                 const seconds = elapsed % 60;
                 const minutes = Math.floor( elapsed / 60 );
                 const hours = Math.floor( elapsed / 3600 );
                 
                 if(hours==0){
                     if(minutes==0){
-                        scoreTimeSpan.innerHTML = seconds + "s";
+                        scoreTimeSpan.innerHTML = seconds + "s " + milis + "ms";
                     }else{
-                        scoreTimeSpan.innerHTML = minutes + "m " + seconds + "s";
+                        scoreTimeSpan.innerHTML = minutes + "m " + seconds + "s " + milis + "ms";
                     }
                 }else{
                     if(minutes==0){
